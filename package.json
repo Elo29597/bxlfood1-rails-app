@@ -1,5 +1,7 @@
 {
   "name": "bxlfood1-rails-app--skip-active-storage",
   "private": true,
-  "dependencies": {}
+  "dependencies": {
+    "bootstrap": "^4.5.0"
+  }
 }
