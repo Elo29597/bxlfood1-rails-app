@@ -9,25 +9,23 @@ class RestaurantsController < ApplicationController
   end
 
    def new
-    @restaurant = Restaurant.new # needed to instantiate the form_for
+   @restaurant = Restaurant.new # needed to instantiate the form_for
   end
 
    def create
-    @restaurant = Restaurant.new(restaurant_params)
+@restaurant = Restaurant.new(restaurant_params)
     @restaurant.save
 
     # no need for app/views/restaurants/create.html.erb
     redirect_to restaurant_path(@restaurant)
   end
 
-    private
 
-  def restaurant_params
-    params.require(:restaurant).permit(:name, :address, :rating)
-  end
 
    def edit
     @restaurant = Restaurant.find(params[:id])
+    redirect_to restaurant_path
+
   end
 
    def update
@@ -38,11 +36,7 @@ class RestaurantsController < ApplicationController
     redirect_to restaurant_path(@restaurant)
   end
 
-    private
 
-  def restaurant_params
-    params.require(:restaurant).permit(:name, :rating, :address)
-  end
 
    def destroy
     @restaurant = Restaurant.find(params[:id])
@@ -51,4 +45,10 @@ class RestaurantsController < ApplicationController
     # no need for app/views/restaurants/destroy.html.erb
     redirect_to restaurants_path
   end
+private
+
+  def restaurant_params
+    params.require(:restaurant).permit(:name, :address)
+  end
+
 end
