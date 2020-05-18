@@ -1,11 +1,23 @@
-<h2>Meet our team</h2>
-<ol>
-  <li>Thanh</li>
-  <li>Dimitri</li>
-  <li>Germain</li>
-  <li>Damien</li>
-  <li>Julien</li>
-</ol>
+
+<%= render 'shared/navbar' %>
+
+
+<div class="container">
+
+<h2>Welcome Welcome</h2>
+<p> are you looking for restaurant? </p>
+
+<%= form_tag restaurants_path, method: :get do %>
+  <%= text_field_tag :query,
+    params[:query],
+    class: "form-control",
+    placeholder: "Where"
+  %>
+  <%= submit_tag "Search", class: "btn btn-primary" %>
+<% end %>
 
 <%= link_to "Know more about us", about_path %>
 <%= link_to "Meet our team", contact_path %>
+<%= link_to "See all the restaurants", restaurants_path %>
+</div>
+<%= render 'shared/footer' %>

@@ -1,16 +1,46 @@
- <h1> List de restaurants </h1>
+<%= render 'shared/navbar' %>
 
-<%= link_to " add a new restaurant", new_restaurant_path %>
-<ul>
+<div class="container">
+ <h1> All restaurants </h1>
+   <hr class="mt-2 mb-5">
+
+
   <% @restaurants.each do |restaurant| %>
-  <h2><%=restaurant.name %></h2>
-  <p><%=restaurant.address %></p>
-  <li><%= link_to restaurant.name, restaurant_path(restaurant) %></li>
+     <div class="restaurant-card">
+      <div class="restaurant-user-info">
+         <%= link_to restaurant.name, restaurant_path(restaurant) %>
+  <!--<h2><%=restaurant.name %></h2>-->
+      </div>
+           <p><%=restaurant.address %></p>
 
-  <%= link_to "Allez voir", restaurant_path(restaurant) %>
+
+     </div>
+  <!--<%= link_to "Allez voir", restaurant_path(restaurant) %>
 
   <%=link_to "Delete ", restaurant_path(restaurant), method: :delete %>
-
+-->
 
     <% end %>
-</ul>
+
+<%= link_to "back home", home_path %>
+<!-- [...] -->
+
+<%= form_tag restaurants_path, method: :get do %>
+  <%= text_field_tag :query,
+    params[:query],
+    class: "form-control",
+    placeholder: "Where"
+  %>
+  <%= submit_tag "Search", class: "btn btn-primary" %>
+<% end %>
+
+
+  </ul>
+
+  </div>
+    <div class="add_new_restaurant">
+<%= link_to " add a new restaurant", new_restaurant_path %>
+  </div>
+
+</div>
+

@@ -2,7 +2,12 @@ class RestaurantsController < ApplicationController
 
    def index
     @restaurants = Restaurant.all
+    if params[:query].present?
+      @restaurants = Restaurant.where(address: params[:query])
+    else
+      @restaurants = Restaurant.all
   end
+end
 
   def show
     @restaurant = Restaurant.find(params[:id])
@@ -45,10 +50,10 @@ class RestaurantsController < ApplicationController
     # no need for app/views/restaurants/destroy.html.erb
     redirect_to restaurants_path
   end
+end
 private
 
   def restaurant_params
     params.require(:restaurant).permit(:name, :address)
   end
 
-end
