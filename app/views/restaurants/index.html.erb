@@ -1,29 +1,33 @@
 <%= render 'shared/navbar' %>
 
 <div class="container">
- <h1> All restaurants </h1>
+
+  <h1> All restaurants </h1>
    <hr class="mt-2 mb-5">
 
+   <div class="restaurants-cards">
+    <% @restaurants.each do |restaurant| %>
 
-  <% @restaurants.each do |restaurant| %>
-     <div class="restaurant-card">
-      <div class="restaurant-user-info">
-         <%= link_to restaurant.name, restaurant_path(restaurant) %>
-  <!--<h2><%=restaurant.name %></h2>-->
+    <div class="restaurant-card">
+
+      <div class="restaurant-info">
+        <p> <%= link_to restaurant.name, restaurant_path(restaurant) %></p>
+              <!--<h2><%=restaurant.name %></h2>-->
       </div>
-           <p><%=restaurant.address %></p>
 
+        <p><%=restaurant.address %></p>
 
-     </div>
+    </div>
+
   <!--<%= link_to "Allez voir", restaurant_path(restaurant) %>
 
-  <%=link_to "Delete ", restaurant_path(restaurant), method: :delete %>
--->
+  <%=link_to "Delete ", restaurant_path(restaurant), method: :delete %>-->
 
-    <% end %>
+          <% end %>
+  </div>
 
 <%= link_to "back home", home_path %>
-<!-- [...] -->
+
 
 <%= form_tag restaurants_path, method: :get do %>
   <%= text_field_tag :query,
@@ -36,11 +40,12 @@
 
 
   </ul>
-
-  </div>
     <div class="add_new_restaurant">
 <%= link_to " add a new restaurant", new_restaurant_path %>
   </div>
 
+  </div>
+
 </div>
+<%= render 'shared/footer' %>
 

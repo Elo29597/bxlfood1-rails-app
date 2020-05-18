@@ -2,22 +2,30 @@
 <%= render 'shared/navbar' %>
 
 
-<div class="container">
 
-<h2>Welcome Welcome</h2>
-<p> are you looking for restaurant? </p>
+  <div class="banner" style="background-image:linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url(https://images.unsplash.com/photo-1490645935967-10de6ba17061?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1335&q=80);">
 
-<%= form_tag restaurants_path, method: :get do %>
-  <%= text_field_tag :query,
-    params[:query],
-    class: "form-control",
-    placeholder: "Where"
-  %>
-  <%= submit_tag "Search", class: "btn btn-primary" %>
-<% end %>
+    <div class="container">
+
+      <h1> What are you looking for? </h1>
+      <p> are you looking for restaurant? </p>
+      <%= form_tag restaurants_path, method: :get do %>
+      <%= text_field_tag :query,
+      params[:query],
+      class: "form-control",
+        placeholder: "Where"
+        %>
+        <%= submit_tag "Search", class: "btn btn-primary" %>
+        <% end %>
+
+    </div>
+
+  </div>
+
 
 <%= link_to "Know more about us", about_path %>
 <%= link_to "Meet our team", contact_path %>
 <%= link_to "See all the restaurants", restaurants_path %>
-</div>
+
+
 <%= render 'shared/footer' %>

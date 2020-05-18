@@ -2,10 +2,22 @@
 
 
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
+  <div class="custom-navbar">
+    <div class="col-4">
+      <div class="search-navbar">
+
+
   <%= link_to "#", class: "navbar-brand" do %>
     <%= image_tag "https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/logo.png" %>
   <% end %>
-
+    </div>
+      </div>
+    </div>
+     <div class="col-4">
+      <div id="navbar-title">
+        <a>BruxellesFood</a>
+      </div>
+    </div>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -19,6 +31,7 @@
       <li class="nav-item">
         <%= link_to "All restaurants", restaurants_path, class: "nav-link" %>
       </li>
+
 
     </ul>
   </div>
