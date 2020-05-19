@@ -29,7 +29,7 @@ end
 
    def edit
     @restaurant = Restaurant.find(params[:id])
-    redirect_to restaurant_path
+
 
   end
 
