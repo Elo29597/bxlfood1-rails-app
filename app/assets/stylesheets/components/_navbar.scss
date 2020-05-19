@@ -10,29 +10,3 @@
 .navbar-lewagon .navbar-brand img {
   width: 40px;
 }
-
-.custom-navbar {
-    height: 62px;
-    background-color: white;
-    -webkit-box-align: center;
-    align-items: center;
-    display: -webkit-box;
-    display: flex;
-    -webkit-box-pack: justify;
-    justify-content: space-between;
-    text-align: center;
-    float: none;
-    vertical-align: top;
-    border-bottom: 1px solid #EBEBEB;
-    font-color: gray;
-}
-#navbar-title {
-    font-size: 30px;
-    padding: 8px 5px 5px 5px;
-    letter-spacing: 0.07em;
-    font-weight: lighter;
-}
-#navbar-title:hover {
-    color: black;
-}
-
