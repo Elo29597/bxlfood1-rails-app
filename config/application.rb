@@ -9,6 +9,7 @@ Bundler.require(*Rails.groups)
 
 module Bxlfood1RailsAppSkipActiveStorage
   class Application < Rails::Application
+    config.assets.enabled = false
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 5.2
 
@@ -18,4 +19,5 @@ module Bxlfood1RailsAppSkipActiveStorage
     # the framework and any gems in your application.
   end
 end
+
 
