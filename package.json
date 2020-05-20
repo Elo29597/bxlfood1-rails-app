@@ -1,6 +1,9 @@
 {
   "name": "bxlfood1-rails-app--skip-active-storage",
   "private": true,
+  "scripts":{
+    "start": "rails s"
+  },
   "dependencies": {
     "babel-plugin-transform-function-bind": "^6.22.0",
     "bootstrap": "^4.5.0",
