@@ -1,14 +1,15 @@
 <%= render 'shared/navbar' %>
 <div class="container">
   <div class="form_design">
-<%= form_for(@restaurant) do |f| %>
+<%= simple_form_for(@restaurant) do |f| %>
   <%= f.label :name %>
   <%= f.text_field :name %>
   <%= f.label :address %>
   <%= f.text_field :address %>
   <%= f.label :description %>
   <%= f.text_field :description %>
-</div>
+
+
 <div class="btn-submit">
   <%= f.submit %>
 <% end %>
