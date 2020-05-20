@@ -1,5 +1,6 @@
 class Restaurant < ApplicationRecord
 
-NAME = ['elo', 'lol', 'ok']
 
+  has_one_attached :photo
 end
+

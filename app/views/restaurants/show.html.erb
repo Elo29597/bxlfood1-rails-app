@@ -1,5 +1,6 @@
 <%= render 'shared/navbar' %>
 
+
 <div class="container">
 
   <h1> Carte d'identité de  <%= @restaurant.name %> </h1>
@@ -8,7 +9,13 @@
   <p><%= @restaurant.address %></p>
   <p><%= @restaurant.description %></p>
 
+
+
+<%= cl_image_tag 'lmin0lept6gtzc57u8tv', width: 400, height: 300, crop: :fill%>
+
+
   <%= link_to "Back to list", restaurants_path %>
 <%= link_to "edit", edit_restaurant_path %>
+
 
 </div>
