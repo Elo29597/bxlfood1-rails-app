@@ -1,1 +1,55 @@
 // Specific CSS for your home-page
+.h1{
+  text-align: center;
+}
+
+
+.banner{
+  height: 400px;
+  background-size: cover;
+  background-position: center;
+  box-shadow: 20px;
+  display: flex;
+      -webkit-box-align: center;
+    align-items: center;
+    color: white;
+
+}
+
+.about {
+background-color: #f4f9f4;
+
+}
+
+.about_us {
+  text-align: center;
+  padding: 30px;
+  letter-spacing: .1em;
+
+}
+
+.card_info{
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* this adds the "card" effect */
+  padding: 10px;
+  text-align: center;
+  width: 100%;
+  background-color: #ecf4f3;
+
+}
+
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
+}
+
+.column {
+  width: 33.33%;
+  padding: 0 10px;
+  height: auto;
+  display: flex;
+  text-align: center;
+
+}
