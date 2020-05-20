@@ -10,9 +10,8 @@
   <p><%= @restaurant.description %></p>
 
 
+<%= cl_image_tag @restaurant.photo.key, height: 300, width: 400, crop: :fill %>
 
-<%= cl_image_tag 'wtfbzjcadotv70uldouo',
-      width: 400, height: 300, crop: :fill %>
 
 
   <%= link_to "Back to list", restaurants_path %>
