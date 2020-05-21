@@ -10,6 +10,8 @@
   <p><%= @restaurant.description %></p>
 
 
+<%= cl_image_tag @restaurant.photo.key, height: 300, width: 400, crop: :fill %>
+
 <!-- app/views/restaurants/show.html.erb -->
 <%= link_to "Delete #{@restaurant.name}",
             restaurant_path(@restaurant),

@@ -8,3 +8,4 @@
 Restaurant.create(name: "Poke house", address: "Av. louise")
 Restaurant.create(name: "Huggy", address: "Bruxelles")
 Restaurant.create(name: "Loola", address: "etterbeek", description: "hey")
+Restaurant.create(name: "Huggy", address: "Bruxelles")

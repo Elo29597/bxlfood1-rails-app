@@ -1,4 +1,4 @@
-<%= render 'shared/navbar' %>
+
 <div class="container">
   <div class="form_design">
 <%= simple_form_for(@restaurant) do |f| %>
@@ -6,8 +6,9 @@
   <%= f.text_field :name %>
   <%= f.label :address %>
   <%= f.text_field :address %>
-  <%= f.label :description %>
+<%= f.label :description %>
   <%= f.text_field :description %>
+
  <%= f.input :photo, as: :file %>
 
 

@@ -19,7 +19,7 @@ class RestaurantsController < ApplicationController
   end
 
   def create
-    @restaurant = Restaurant.new(restaurant_params)
+         @restaurant = Restaurant.new(restaurant_params)
     @restaurant.save
 
     # no need for app/views/restaurants/create.html.erb
@@ -35,7 +35,7 @@ class RestaurantsController < ApplicationController
     @restaurant = Restaurant.find(params[:id])
     @restaurant.update(restaurant_params)
     # no need for app/views/restaurants/update.html.erb
-    redirect_to restaurant_path(@restaurant)
+  redirect_to restaurants_path
   end
 
 
@@ -47,6 +47,7 @@ class RestaurantsController < ApplicationController
     redirect_to restaurants_path, :notice => "Your post has been deleted successfully."
   end
 end
+
 
 private
 
