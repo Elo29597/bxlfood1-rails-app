@@ -19,15 +19,13 @@
 
     </div>
 
- <%= link_to "Allez voir", restaurant_path(restaurant) %>
 
 
- <%= link_to "up", restaurant_path(restaurant), method: :delete %>
+
+
 <% end %>
 </div>
 
-
-<%= link_to "back home", home_path %>
 
 
 <%= form_tag restaurants_path, method: :get do %>
@@ -39,6 +37,7 @@
   <%= submit_tag "Search", class: "btn btn-primary" %>
 <% end %>
 
+<%= link_to "back home", home_path %>
 
   </ul>
     <div class="add_new_restaurant">
