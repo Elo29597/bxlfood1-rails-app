@@ -1,24 +1,22 @@
 
 <%= render 'shared/navbar' %>
 
-  <div class="banner" style="background-image:linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url(https://images.unsplash.com/photo-1490645935967-10de6ba17061?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1335&q=80);">
 
-    <div class="container">
-
-      <h1> What are you looking for? </h1>
-      <p> are you looking for restaurant? </p>
-      <%= form_tag restaurants_path, method: :get do %>
-      <%= text_field_tag :query,
+<div class="banner" style="background-image:linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url(https://images.unsplash.com/photo-1490645935967-10de6ba17061?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1335&q=80);">
+  <div class="container">
+    <h1> What are you looking for? </h1>
+    <p> are you looking for restaurant? </p>
+    <%= form_tag restaurants_path, method: :get do %>
+    <%= text_field_tag :query,
       params[:query],
       class: "form-control",
-        placeholder: "Where"
+      placeholder: "Where"
         %>
-        <%= submit_tag "Search", class: "btn btn-primary" %>
-        <% end %>
-
-    </div>
+    <%= submit_tag "Search", class: "btn btn-primary" %>
+    <% end %>
 
   </div>
+</div>
 
 
 <div class="about">
@@ -54,8 +52,6 @@
   <div class="column">
     <div class="card_info"><h5>Info's</h5>
       <div class="droite">
-
-
       </div>
     </div>
   </div>
