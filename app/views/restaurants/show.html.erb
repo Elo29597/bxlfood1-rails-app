@@ -10,12 +10,19 @@
   <p><%= @restaurant.description %></p>
 
 
-<%= cl_image_tag @restaurant.photo.key, height: 300, width: 400, crop: :fill %>
-
+<!-- app/views/restaurants/show.html.erb -->
+<%= link_to "Delete #{@restaurant.name}",
+            restaurant_path(@restaurant),
+            method: :delete,
+            data: { confirm: "Are you sure?" } %>
+<a data-confirm="Are you sure?" rel="nofollow" data-method="delete" href="/restaurants/2">
+  Delete the spoon
+</a>
 
 
   <%= link_to "Back to list", restaurants_path %>
 <%= link_to "edit", edit_restaurant_path %>
+<%= link_to "Delete", restaurant_path, :confirm => "Are you sure?", :method => :delete %>
 
-
+<%= link_to "Delete", @restaurant, :method => :delete %>
 </div>

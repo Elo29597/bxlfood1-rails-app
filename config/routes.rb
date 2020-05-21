@@ -5,18 +5,20 @@ Rails.application.routes.draw do
   get 'contact', to: 'pages#contact'
   get 'home', to: 'pages#home'
 
-  get    "restaurants",          to: "restaurants#index"
+ #get    "restaurants",          to: "restaurants#index"
 
-  get    "restaurants/new",      to: "restaurants#new",  as: :new_restaurant
-  post   "restaurants",          to: "restaurants#create"
+  #get    "restaurants/new",      to: "restaurants#new",  as: :new_restaurant
+  #post   "restaurants",          to: "restaurants#create"
 
   # NB: The `show` route needs to be *after* `new` route.
-  get    "restaurants/:id",      to: "restaurants#show", as: :restaurant
+  #get    "restaurants/:id",      to: "restaurants#show", as: :restaurant
 
-  get    "restaurants/:id/edit", to: "restaurants#edit", as: :edit_restaurant
-  patch  "restaurants/:id",      to: "restaurants#update"
+#  get    "restaurants/:id/edit", to: "restaurants#edit", as: :edit_restaurant
+ # patch  "restaurants/:id",      to: "restaurants#update"
 
-  delete "restaurants/:id",      to: "restaurants#destroy"
- resources :restaurants, only: [:create, :index, :destroy]
+  #delete "restaurants/:id",      to: "restaurants#destroy"
+ resources :restaurants
+
+
 end
 

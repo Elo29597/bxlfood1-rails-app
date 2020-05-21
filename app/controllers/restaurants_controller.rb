@@ -44,11 +44,14 @@ end
 
 
    def destroy
-    @restaurant = Restaurant.find(params[:id])
+     @restaurant = Restaurant.find(params[:id])
     @restaurant.destroy
 
     # no need for app/views/restaurants/destroy.html.erb
-    redirect_to restaurants_path
+
+
+    # no need for app/views/restaurants/destroy.html.erb
+    redirect_to restaurants_path, :notice => "Your post has been deleted successfully."
   end
 end
 private
