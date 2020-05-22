@@ -1,5 +1,6 @@
 <%= render 'shared/navbar' %>
-
+<div class="banner-show" style="background-image:linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url(https://images.unsplash.com/photo-1490645935967-10de6ba17061?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1335&q=80);">
+</div>
 <div class="container">
 
   <h1> All restaurants </h1>
@@ -16,11 +17,8 @@
       </div>
 
         <p><%=restaurant.address %></p>
-
+        <%= image_tag restaurant.photo, class: "channel-card-logo"%>
     </div>
-
-
-
 
 
 <% end %>
@@ -28,15 +26,15 @@
 
 
 
-<%= form_tag restaurants_path, method: :get do %>
+<!--<%= form_tag restaurants_path, method: :get do %>
   <%= text_field_tag :query,
     params[:query],
     class: "form-control",
     placeholder: "Where"
   %>
   <%= submit_tag "Search", class: "btn btn-primary" %>
-<% end %>
-
+<% end %>-->
+<div>
 <%= link_to "back home", home_path %>
 
   </ul>

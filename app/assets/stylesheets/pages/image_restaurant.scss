@@ -1,0 +1,28 @@
+.image-restaurant{
+
+  float:right;
+ width: 45%;
+
+
+}
+
+.name-restaurant{
+  float: left;
+  width: 45%;
+}
+
+@media screen and (max-width:600px) {
+  .image-restaurant {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width:600px) {
+  .name-restaurant {
+    width: 100%;
+  }
+}
+
+.banner-show{
+  height: 250px;
+}

@@ -1,28 +1,28 @@
 <%= render 'shared/navbar' %>
 
+<div class="banner-show" style="background-image:linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url(https://images.unsplash.com/photo-1490645935967-10de6ba17061?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1335&q=80);">
+</div>
 
 <div class="container">
+    <h1> Carte d'identité de  <%= @restaurant.name %> </h1>
+    <hr class="mt-2 mb-5">
 
-  <h1> Carte d'identité de  <%= @restaurant.name %> </h1>
-     <hr class="mt-2 mb-5">
-   <div class="name-restaurant">
-  <h2><%= @restaurant.name %></h2>
-</div>
-<div class="address-restaurant">
-  <p><%= @restaurant.address %></p>
-</div>
-<div class="description-restaurant">
-  <p><%= @restaurant.description %></p>
-</div>
+  <div class="name-restaurant">
+    <h2><%= @restaurant.name %></h2>
+    <p><%= @restaurant.address %></p>
+    <p><%= @restaurant.description %></p>
+  </div>
 
-<div class="image-restaurant">
-<%= cl_image_tag @restaurant.photo.key, height: 300, width: 400, crop: :fill %>
-</div>
-<div class="liens">
 
-  <%= link_to "Back to list", restaurants_path %> <br>
+  <%= cl_image_tag @restaurant.photo.key, height: 300, width: 400, crop: :fill%>
+
+
+<br>
+<%= link_to "Back to list", restaurants_path %> <br>
 <%= link_to "edit", edit_restaurant_path %> <br>
-
 <%= link_to "Delete", @restaurant, :method => :delete %>
+
+
 </div>
-</div>
+
+<%= render 'shared/footer' %>
