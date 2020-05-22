@@ -35,7 +35,7 @@ class RestaurantsController < ApplicationController
     @restaurant = Restaurant.find(params[:id])
     @restaurant.update(restaurant_params)
     # no need for app/views/restaurants/update.html.erb
-  redirect_to restaurants_path
+  redirect_to restaurant_path(@restaurant)
   end
 
 
