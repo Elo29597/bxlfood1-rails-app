@@ -6,45 +6,6 @@
   <h1> All restaurants </h1>
    <hr class="mt-2 mb-5">
 
-   <div class="restaurants-cards">
-    <% @restaurants.each do |restaurant| %>
-
-    <div class="restaurant-card">
-
-      <div class="restaurant-info">
-        <p> <%= link_to restaurant.name, restaurant_path(restaurant) %></p>
-
-      </div>
-
-        <p><%=restaurant.address %></p>
-
-        <%= image_tag restaurant.photo, class: "channel-card-logo"%>
-    </div>
-
-
-<% end %>
-</div>
-
-
-
-<%= form_tag restaurants_path, method: :get do %>
-  <%= text_field_tag :query,
-    params[:query],
-    class: "form-control",
-    placeholder: "Where"
-  %>
-  <%= submit_tag "Search", class: "btn btn-primary" %>
-<% end %>
-<div>
-<%= link_to "back home", home_path %>
-
-  </ul>
-    <div class="add_new_restaurant">
-<%= link_to " add a new restaurant", new_restaurant_path %>
-  </div>
-
-  </div>
-
 </div>
 <%= render 'shared/footer' %>
 
