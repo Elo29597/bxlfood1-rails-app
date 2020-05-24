@@ -1,5 +1,11 @@
 Rails.application.routes.draw do
 
+
+get '/' => 'users#index'
+#post '/' => 'sessions#create'
+post '/users' => 'users#create'
+ get '/restaurants' => 'restaurants#index'
+
   root to: 'pages#home'
   get 'about', to: 'pages#about'
   get 'contact', to: 'pages#contact'
