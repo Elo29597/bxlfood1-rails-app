@@ -12,7 +12,7 @@ def create
 
   else
 
-  flash[:registration_errors] = user.errors.full_messages
+  flash[:register_errors] = user.errors.full_messages
 
   redirect_to '/'
 
