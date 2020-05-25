@@ -4,7 +4,37 @@
 
 <div class="banner" style="background-image:linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url(https://images.unsplash.com/photo-1490645935967-10de6ba17061?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1335&q=80);">
   <div class="container">
-    <h1> What are you looking for? </h1>
+        <h1> What are you looking for? </h1>
+    <div class="banner-content text-center d-flex">
+      <select id="location" class="form-control" type="text" placeholder="Where?">
+        <option selected>Where?</option>
+        <option>All</option>
+        <option value="Ixelles">Ixelles</option>
+        <option>Etterbeek</option>
+        <option value="Brussels-centrum">Brussels-centrum</option>
+        <option>WSP-WSL</option>
+        <option>Flagey</option>
+
+      </select>
+      <select id="style" class="form-control" type="text" placeholder="style?" aria-label="Search">
+        <option>style?</option>
+        <option>All</option>
+        <option>Italian</option>
+        <option>French</option>
+        <option>American</option>
+        <option>Asian</option>
+        <option>Belgian</option>
+        <option>Brunch</option>
+      </select>
+
+    <a class="btn btn-flat  btn-info" onclick="querry()">Go</a>
+
+  </div>
+</div>
+</div>
+</div>
+
+   <!-- <h1> What are you looking for? </h1>
     <p> are you looking for restaurant? </p>
     <%= form_tag restaurants_path, method: :get do %>
     <%= text_field_tag :query,
@@ -16,7 +46,7 @@
     <% end %>
 
   </div>
-</div>
+</div>-->
 
 
 <div class="about">
