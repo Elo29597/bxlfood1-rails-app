@@ -1,4 +1,6 @@
 <%= render 'shared/navbar' %>
+<body class="w3-light-grey w3-content" style="max-width:1600px">
+
 <div class="banner-show" style="background-image:linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url(https://images.unsplash.com/photo-1490645935967-10de6ba17061?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1335&q=80);">
 </div>
 <div class="container">
@@ -6,7 +8,7 @@
   <h1> All restaurants </h1>
    <hr class="mt-2 mb-5">
 
-   <div class="restaurants-cards">
+ <!--  <div class="restaurants-cards">
     <% @restaurants.each do |restaurant| %>
 
     <div class="restaurant-card">
@@ -24,7 +26,24 @@
 
 <% end %>
 </div>
+-->
 
+ <!-- First Photo Grid-->
+  <div class="w3-row-padding">
+     <% @restaurants.each do |restaurant| %>
+    <div class="w3-quarter w3-container w3-margin-bottom">
+
+  <%= image_tag restaurant.photo, class: "channel-card-logo" %>
+      <div class="w3-container w3-white">
+        <div class="color"><p><%= link_to restaurant.name, restaurant_path(restaurant) %></p>
+
+         <p><%=restaurant.address %></p>
+
+     </div>
+  </div>
+  </div>
+<% end %>
+</div>
 
 
 <%= form_tag restaurants_path, method: :get do %>
