@@ -45,6 +45,7 @@
 <% end %>
 </div>
 
+<!-- query: SELECT * FROM Restaurant WHERE style == :style AND ville == :ville -->
 
 <%= form_tag restaurants_path, method: :get do %>
   <%= text_field_tag :query,

@@ -7,7 +7,7 @@
     <h1> Carte d'identité de  <%= @restaurant.name %> </h1>
     <hr class="mt-2 mb-5">
 
-  <div class="name-restaurant">
+ <!-- <div class="name-restaurant">
     <h2><%= @restaurant.name %></h2>
     <p><%= @restaurant.address %></p>
     <p><%= @restaurant.description %></p>
@@ -15,8 +15,18 @@
 
 
   <%= cl_image_tag @restaurant.photo.key, height: 300, width: 400, crop: :fill%>
+-->
 
-
+<div class="w3-row">
+  <div class="w3-half w3-container w3-white">
+     <h2><%= @restaurant.name %></h2>
+     <p><%= @restaurant.address %></p>
+    <p><%= @restaurant.description %></p>
+  </div>
+  <div class="w3-half w3-container">
+  <%= cl_image_tag @restaurant.photo.key, height: 300, width: 400, crop: :fill%>
+  </div>
+</div>
 <br>
 <%= link_to "Back to list", restaurants_path %> <br>
 <%= link_to "edit", edit_restaurant_path %> <br>
