@@ -35,9 +35,10 @@
 
   <%= image_tag restaurant.photo, class: "channel-card-logo" %>
       <div class="w3-container w3-white">
-        <div class="color"><p><%= link_to restaurant.name, restaurant_path(restaurant) %></p>
+        <div class="color"><p><%= link_to restaurant.name, restaurant_path(restaurant) %><br>
+          <%=restaurant.style %></p>
 
-         <p><%=restaurant.address %></p>
+
 
      </div>
   </div>

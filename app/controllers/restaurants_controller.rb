@@ -52,7 +52,7 @@ end
 private
 
   def restaurant_params
-    params.require(:restaurant).permit(:name, :address, :description, :photo)
+    params.require(:restaurant).permit(:name, :address, :description, :photo, :localisation, :style)
 
   end
 

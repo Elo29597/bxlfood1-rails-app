@@ -1,21 +1,32 @@
 
 <div class="container">
+  <h1> MIAM add a new restaurant </h1>
   <div class="form_design">
+
+
 <%= simple_form_for(@restaurant) do |f| %>
+<div class="input">
   <%= f.label :name %>
-  <%= f.text_field :name %>
+
+  <%= f.text_field :name %><br>
+
   <%= f.label :address %>
-  <%= f.text_field :address %>
-<%= f.label :description %>
-  <%= f.text_field :description %>
+  <%= f.text_field :address %><br>
+    <%= f.label :localisation %>
+  <%= f.text_field :localisation %><br>
+  <%= f.label :description %>
+  <%= f.text_field :description %><br>
+  <%= f.label :style %>
+  <%= f.text_field :style %><br>
 
  <%= f.input :photo, as: :file %>
-
+</div>
 
 <div class="btn-submit">
   <%= f.submit %>
-<% end %>
+<% end %> <br>
+<%= link_to "Back to list", restaurants_path %> <br>
+</div>
 </div>
 
-</div>
 
