@@ -1,4 +1,5 @@
 // Specific CSS for your home-page
+
 .h1{
   text-align: center;
 }
@@ -17,7 +18,7 @@
 }
 
 .about {
-background-color: #f4f9f4;
+
 
 }
 
@@ -33,7 +34,7 @@ background-color: #f4f9f4;
   padding: 10px;
   text-align: center;
   width: 100%;
-  background-color: #ecf4f3;
+
 
 }
 
@@ -53,3 +54,24 @@ background-color: #f4f9f4;
   text-align: center;
 
 }
+.about-us{
+
+  text-align:center;
+  width: 10%;
+    background-color: #ecf4f3;
+
+  img{
+    width: 50%;
+  }
+}
+
+.recent-place{
+  text-align: center;
+  padding: 30px;
+    display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #ecf4f3;
+}
+
+

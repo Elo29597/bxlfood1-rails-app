@@ -17,9 +17,13 @@
      <h2><%= @restaurant.name %></h2>
      ◆ <%= @restaurant.address %>,
       <%= @restaurant.localisation %><br>
-     ◆ <%= @restaurant.style %>
+     ◆ <%= @restaurant.style %><br>
+     <% if @restaurant.recent.include? 'yes' %>
+    <%= image_tag "https://res.cloudinary.com/dcjfitqds/image/upload/v1591013931/new_c1ynni.png", class: "card-logo"%>
+<% end %>
+
    </div>
-   <div class="col-lg-6 ">
+   <div class="description col-lg-6 ">
     <br>
     <p><%= @restaurant.description %></p>
   </div>

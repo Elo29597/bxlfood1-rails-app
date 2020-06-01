@@ -20,11 +20,15 @@
   <%= f.text_field :style %><br>
 
  <%= f.input :photo, as: :file %>
+   <%= f.label :recent %>
+
+  <%= f.text_field :recent %><br>
 </div>
 
 <div class="btn-submit">
   <%= f.submit %>
-<% end %> <br>
+<% end %>
+<br>
 <%= link_to "Back to list", restaurants_path %> <br>
 </div>
 </div>

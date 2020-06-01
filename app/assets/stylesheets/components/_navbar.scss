@@ -4,12 +4,11 @@
     position: fixed;
   top: 0;
   width: 100%;
+  z-index: 1030;
+
 
 }
 
-.navbar-lewagon .navbar-collapse {
-  flex-grow: 0;
-}
 
 .navbar-lewagon .navbar-brand img {
   width: 40px;
@@ -17,9 +16,14 @@
 }
 
 #navbar-title{
-  text-align: center;
+
   font-family: Georgia;
   font-size: 30px;
 
-}
 
+}
+.justify-content-between {
+    -webkit-box-pack: justify !important;
+    justify-content: space-between !important;
+
+}

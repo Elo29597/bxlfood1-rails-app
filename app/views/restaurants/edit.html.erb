@@ -1,16 +1,20 @@
-<p>Edit restaurant's information</p>
+<div class="container">
+<h1>Edit restaurant's information</h1>
 <%= simple_form_for(@restaurant) do |f| %>
   <%= f.label :name %>
-  <%= f.text_field :name %>
+  <%= f.text_field :name %><br>
   <%= f.label :address %>
-  <%= f.text_field :address %>
+  <%= f.text_field :address %><br>
   <%= f.label :localisation %>
-  <%= f.text_field :localisation %>
+  <%= f.text_field :localisation %> <br>
   <%= f.label :description %>
-  <%= f.text_field :description %>
+  <%= f.text_field :description %> <br>
   <%= f.label :style %>
-  <%= f.text_field :style %>
+  <%= f.text_field :style %><br>
   <%= f.input :photo, as: :file %>
+   <%= f.label :recent %>
+  <%= f.text_field :recent %><br>
 
   <%= f.submit %>
 <% end %>
+</div>

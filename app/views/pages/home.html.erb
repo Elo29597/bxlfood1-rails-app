@@ -60,6 +60,32 @@
   </div>
 </div>
 
+<div class="recent-place">
+  <div class="container">
+  <h2> recent places </h2>
+
+ <div class="w3-row-padding p-3">
+     <% @restaurants.each do |restaurant| %>
+
+    <div class="w3-quarter w3-container w3-margin-bottom">
+
+
+    <div class="w3-container w3-white ">
+        <div class="color "><h5>
+          <%= image_tag restaurant.photo, class: "channel-card-logo", height: 300, width: 400, crop: :fill%>
+          <%= link_to restaurant.name, restaurant_path(restaurant) %></h5>
+          <%=link_to restaurant.style, restaurant_path(restaurant)  %></p>
+
+        </div>
+
+    </div>
+  </div>
+  <% end %>
+
+</div>
+
+</div>
+</div>
 
 
 <div class="contact">
@@ -88,6 +114,24 @@
   </div>
 </div>
 </div>
+
+<br>
+<br>
+<br>
+
+
+  <div class="row">
+<div class=" about-us col-12">
+  <h2> Eloïse & Valentine</h2>
+  <hr>
+   <%= image_tag "https://res.cloudinary.com/dcjfitqds/image/upload/v1590581640/DSC_0102_yxofzp.jpg" %>
+<br>
+<br>
+</div>
+
+</div>
+</div>
+
 
 
 <!--<%= link_to "Know more about us", about_path %>
