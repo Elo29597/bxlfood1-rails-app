@@ -3,6 +3,7 @@ Rails.application.routes.draw do
 
   get '/' => 'users#index'
   post '/' => 'sessions#create'
+
   post '/users' => 'users#create'
   get '/restaurants' => 'restaurants#index'
 

@@ -18,6 +18,8 @@ class RestaurantsController < ApplicationController
     @restaurant.save
     # no need for app/views/restaurants/create.html.erb
     redirect_to restaurant_path(@restaurant)
+
+
   end
 
   def show
@@ -50,6 +52,8 @@ private
 
 def restaurant_params
   params.require(:restaurant).permit(:name, :address, :description, :photo, :recent, :localisation, :style)
-
 end
+
+
+
 

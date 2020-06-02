@@ -1,10 +1,4 @@
-.image-restaurant{
 
-  float:right;
-  width: 50%;
-
-
-}
 
 .name-restaurant{
   float: left;
@@ -64,4 +58,12 @@
 }
 .card-logo{
   width: 30px;
+}
+
+@media (min-width: 992px){
+.col-lg-4 {
+    -ms-flex: 0 0 33.333333%;
+    flex: 0 0 33.333333%;
+    /* max-width: 33.333333%; */
+}
 }

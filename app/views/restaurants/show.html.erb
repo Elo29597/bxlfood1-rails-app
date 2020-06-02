@@ -29,20 +29,18 @@
   </div>
 
 
-  <div class="mx-auto d-block col-lg-4">
+  <div class="mx-auto text-center ">
     <br>
    <%= cl_image_tag @restaurant.photo.key, height: 300, width: 400, crop: :fill%>
-  </div>
 
-  </div>
 
-  <br>
-  <div class="flex-banner text-center col-lg-12">
-    <a class="btn btn-link btn-outline-success" id="booking-btn" target="_blank" href="https://stkildabxl.be/reservation/">Book a table</a>
-<br>
+    <br>
+    <br>
+    <a class="btn btn-link btn-outline-success " id="booking-btn" target="_blank" href="https://stkildabxl.be/reservation/">Book a table</a>
+
   <%= link_to "https://www.instagram.com/bruxellesfood/?hl=fr", class: "navbar-brand" do %>
 
-    <div class="insta">
+    <div class="insta ">
     <%= image_tag "https://res.cloudinary.com/dcjfitqds/image/upload/v1590498865/Capture_d_e%CC%81cran_2020-05-26_a%CC%80_15.14.09_kidsum.png" %>
    <% end %>
 
@@ -51,6 +49,13 @@
   <%= link_to "edit", edit_restaurant_path %>
   <%= link_to "Delete", @restaurant, :method => :delete %>
   </div>
-</div>
+
+  </div>
+
+
+  </div>
+
+  <br>
+
 
 <%= render 'shared/footer' %>
