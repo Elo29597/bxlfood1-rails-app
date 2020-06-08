@@ -1,0 +1,26 @@
+
+<div class="recent-place">
+  <div class="container">
+  <h2> All restaurants </h2>
+
+ <div class="w3-row-padding p-3">
+     <% @restaurants.each do |restaurant| %>
+
+    <div class="w3-quarter w3-container w3-margin-bottom ">
+
+
+    <div class="w3-container w3-white">
+        <div class="color"><h5>
+          <%= image_tag restaurant.photo, class: "channel-card-logo", height: 300, width: 400, crop: :fill%>
+          <%= link_to restaurant.name, show_path(restaurant) %></h5>
+          <%=link_to restaurant.style, show_path(restaurant)  %></p>
+
+
+     </div>
+  </div>
+  </div>
+<% end %>
+<%= link_to " ADD A RESTAURANT", new_place_path %>
+</div>
+</div>
+</div>

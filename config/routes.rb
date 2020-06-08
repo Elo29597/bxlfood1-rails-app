@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
 
 
-  get '/' => 'users#index'
-  post '/' => 'sessions#create'
+  get '/index' => 'users#index'
+  post '/' => 'admin#admin'
 
   post '/users' => 'users#create'
   get '/restaurants' => 'restaurants#index'
@@ -11,6 +11,14 @@ Rails.application.routes.draw do
   get 'about', to: 'pages#about'
   get 'contact', to: 'pages#contact'
   get 'home', to: 'pages#home'
+
+
+  get 'admin', to: 'admin#admin'
+    get "admin/new", to: "admin#new", as: :new_place
+    get "admin/:id", to: "admin#show", as: :show
+    get "admin/:id/edit", to: "admin#edit", as: :edit
+    delete "admin/:id", to: "admin#destroy"
+
 
   get "restaurants", to: "restaurants#index"
 

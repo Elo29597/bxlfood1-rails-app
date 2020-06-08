@@ -1,8 +1,6 @@
-class RestaurantsController < ApplicationController
-
-
-  def index
-    #@restaurants = Restaurant.all
+class AdminController < ApplicationController
+    def admin
+        #@restaurants = Restaurant.all
     if params[:query].present?
       @restaurants = Restaurant.where(params[:query])
     else
@@ -10,7 +8,7 @@ class RestaurantsController < ApplicationController
     end
   end
 
-  def new
+def new
     @restaurant = Restaurant.new # needed to instantiate the form_for
   end
 
@@ -18,7 +16,7 @@ class RestaurantsController < ApplicationController
     @restaurant = Restaurant.new(restaurant_params)
     @restaurant.save
     # no need for app/views/restaurants/create.html.erb
-    redirect_to restaurant_path(@restaurant)
+    redirect_to admin_path(@restaurant)
 
 
   end
@@ -54,7 +52,3 @@ private
 def restaurant_params
   params.require(:restaurant).permit(:name, :address, :description, :photo, :recent, :localisation, :style)
 end
-
-
-
-
